@@ -9,6 +9,8 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *IDLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 
 @end
 
@@ -18,14 +20,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSLog(@"________Id:%@ type:%@",self.Id,self.type);
-
-
+    self.IDLabel.text = [NSString stringWithFormat:@"ID: %@",self.Id];
+    self.typeLabel.text = [NSString stringWithFormat:@"type: %@",self.type];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
